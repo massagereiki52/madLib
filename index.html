@@ -1,0 +1,133 @@
+<!--
+making MadLIBs
+how do we show/hide? display. visibility
+reference the core concept topics to assist you
+22 innerHTML
+25 events
+26 removals
+29 entering Text
+23 change CSS
+className=""
+display vs visibility
+28 enter key
+focus() blur()
+cursor pointer
+preventing empty inputs
+reseting the form to try again
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Master MadLib</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <header>
+    <h1>Mad Lib</h1>
+
+  </header>
+
+  <div id="inputPanel">
+    <h3 class="margin">Don't think about the answer's.</h3>
+    <form action="index.html" method="post">
+      <p>First word that pop's into your head:
+        <input class="form" id="firstWord" type="text" placeholder="FirstWord">
+      </p>
+      <p>A boy's name:
+        <input class="form" id="boysName" type="text" placeholder="boy's name">
+      </p>
+      <p>A girl's name:
+        <input class="form" id="girlsName" type="text" placeholder="girl's name">
+      </p>
+      <p>Color of your eyes:
+        <input class="form" id="eyeColor" type="text" placeholder="your eye color">
+      </p>
+      <p>Place:
+        <input class="form" id="place" type="text" placeholder="place">
+      </p>
+      <p>Favorite flavor of ice cream
+        <input class="form" id="icecream" type="text" placeholder="favorite ice cream">
+      </p>
+      <p>Name of a Super Hero
+        <input class="form" id="suberhero" type="text" placeholder="Super Hero">
+      </p>
+      <p>Name of a Marvel Villian
+        <input class="form" id="villian" type="text" placeholder="Marvel Villian">
+      </p>
+      <p>What's your favorite holiday?
+        <input class="form" id="favoriteholiday" type="text" placeholder="Favorite Holiday">
+      </p>
+      <p>Are you married/in a relationship?
+        <input type="radio" name="answer" value="yes"> Yes
+        <input type="radio" name="answer" value="no"> No
+      </p>
+      <p>What is your favorite animal?
+        <input type="radio" name="answer2" value="cat"> Cat
+        <input type="radio" name="answer2" value="dog"> Dog
+        <input type="radio" name="answer2" value="dog"> Other
+        <input class="form" id="favorite animal" type="text" placeholder="other">
+      </p>
+      <div class="submitc">
+        <button id="submit">Submit your answers</button>
+      </div>
+      <h4>Please answer all questions.</h4>
+    </form>
+
+  </div>
+  <div id="outputPanel">
+    <!-- <h1>A Journey Back in Time</h1> -->
+    <p>Your story....</p>
+
+    <p id="theStory">junk</p>
+    <div class="submitc">
+      <button id="again">Again?</button>
+    </div>
+  </div>
+  <script>
+    const inputPanel = document.querySelector("#inputPanel");
+    const outputPanel = document.querySelector("#outputPanel");
+    const warning = document.querySelector("#warning");
+
+    const submit = document.querySelector("#submit");
+    submit.addEventListener("click", writeStory, false);
+
+    const again = document.querySelector("#again");
+    again.addEventListener("click", resetPage, false);
+
+    document.querySelector('#firstName').focus();
+
+    const firstName = document.querySelector('#firstName');
+    const favColor = document.querySelector("#favColor");
+    const place = document.querySelector('#place');
+    const theStory = document.querySelector("#theStory");
+
+    window.addEventListener("keydown", keydownHandler, false);
+
+    function keydownHandler(event) {
+      console.log("Enter key pressed");
+
+    }
+
+    function checkComplete() {
+      //verify the user filled in the form
+
+    }
+
+    function writeStory() {
+      //grab the input values to write the story
+
+    }
+
+    function resetPage() {
+      //put stuff here to reset the page so the user can try again
+
+    }
+  </script>
+</body>
+
+</html>
