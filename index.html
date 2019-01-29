@@ -61,7 +61,7 @@ reseting the form to try again
         <input class="form" id="icecream" type="text" placeholder="favorite ice cream">
       </p>
       <p>Name of a Super Hero
-        <input class="form" id="suberhero" type="text" placeholder="Super Hero">
+        <input class="form" id="superhero" type="text" placeholder="Super Hero">
       </p>
       <p>Name of a Villian
         <input class="form" id="villain" type="text" placeholder="Villain">
@@ -79,15 +79,11 @@ reseting the form to try again
         <input class="form" id="age" type="text" placeholder="age">
       </p>
 
-      <p>Are you married/in a relationship?
-        <input type="radio" name="answer" value="yes"> Yes
-        <input type="radio" name="answer" value="no"> No
-      </p>
       <p>What is your favorite animal?
-        <input type="radio" name="answer2" value="cat"> Cat
-        <input type="radio" name="answer2" value="dog"> Dog
-        <input type="radio" name="answer2" value="dog"> Other
-        <input class="form" id="favorite animal" type="text" placeholder="other">
+        <!-- <input id="favoriteAnimal" idtype="radio" name="answer2" value="cat"> Cat
+        <input id="favoriteAnimal" type="radio" name="answer2" value="dog"> Dog
+        <input id="favoriteAnimal" type="radio" name="answer2" value="dog"> Other -->
+        <input class="form" id="favoriteAnimal" type="text" placeholder="animal">
       </p>
       <div class="submit">
         <button id="submit">Submit your answers</button>
@@ -102,53 +98,29 @@ reseting the form to try again
 
 
     <p id="theStory">
-      <figure>
-        <img src="Grandpaandme.png" alt="GrandpaPicture">
-        <figcaption><strong>This MadLib is dedicated to my grandpa Pat.</strong></figcaption>
-      </figure> -->
-      <!-- <p><strong>(First Word)</strong>! Did your grandpa ever ask you to pull his finger? My grandpa <strong>(boy’s name)</strong> used to do that all of the time. He would either be pulling my sister <strong>(girl’s name)</strong>’s toes or be walking around
-        asking us to pull his finger. I’d like to tell you a story about my grandpa, <strong>(boy’s name)</strong>. He’s kind, emotional, and a bit kooky. I love my grandpa, but he has never been the most appropriate person. He is a great person, and
-        he looks great in <strong>(favorite color)</strong>. He <strong>(emotion)</strong>’s <strong>(favorite animal)</strong>’s, the color <strong>(eyes)</strong> and the movie <strong>(age)</strong> years of singing like a <strong>(favorite animal)</strong>.
-        In fact, he <strong>(emotion)</strong>‘s it so much that he doesn’t go a <strong>(holiday)</strong> without making the whole family watch it with him. I will only be sharing a few stories about my grandpa because the number of them is just too
-        great. Sit back relax and enjoy the laughs, <strong>(first word)</strong>!</p>
 
+    </p>
 
-      <p>There was this other time last <strong>(season)</strong> that grandpa <strong>(action)</strong>ed all the way to Hawaii. It was a sight to see. He did this all while dressed up as his favorite <strong>(Villain)</strong> costume. He painted his face
-        <strong>(color)</strong> and <strong>(action)</strong> around in circles screaming, “
-        <strong>(First Word)</strong>! Help I’ve lost my <strong>(favorite animal)</strong>, it’s fur is <strong>(eye color)</strong> and <strong>(favorite color)</strong>. My poor, <strong>(favorite animal)</strong> is <strong>(age)</strong> and dressed
-        in a <strong>(superhero)</strong>costume.” Grandpa began to be overwhelmed by extreme <strong>(emotion)</strong>. Grandma said to him, “Are you hungry, let’s go get you some <strong>(ice cream)</strong> ice cream, it’s your favorite.” Grandpa
-        screamed, <strong>(action)</strong>ed and yelled, “<strong>(girl’s name)</strong>, why are you standing there with your <strong>(eyes)</strong> beady eyes. <strong>(boy’s name)</strong> is missing!” “<strong>(First Word)</strong>!” We never knew
-        what would be coming out of grandpa’s mouth. He did this at the local bowling alley in front of all of our family, and friends. </p>
-
-      <p><strong>(First Word)</strong>! Did your grandpa ever ask you to pull his finger? My grandpa <strong>(boy’s name)</strong> used to do that all of the time. He would either be pulling my sister <strong>(girl’s name)</strong>’s toes or be walking around
-        asking us to pull his finger. We were even in
-        <strong>(place)</strong> eating <strong>(ice cream)</strong> ice cream watching <strong>(Super Hero)</strong> and <strong>(Villain)</strong> wrestle with <strong>(favorite animal)</strong>’s, when he yelled out, “<strong>(first word)</strong>!”
-        Everyone just stopped and stared at us I was so embarrassed. This was the first time of many embarrassing experiences with my grandpa. </p>
-
-      <p>Poor grandma <strong>(girl’s name)</strong>, She couldn’t take grandpa anywhere. When we were in <strong>(place)</strong> he decided to go to the zoo and <strong>(action)</strong> until his complexion turned <strong>(eye color)</strong>. He <strong>(action)</strong>ed
-        until <strong>(superhero)</strong> the zookeeper came to the rescue and put him into the <strong>(animal)</strong>’s pen. He was like the energizer bunny. He kept going and going and going and going. He <strong>(action)</strong> until <strong>(holiday)</strong>.
-        Grandma saw this and got <strong>(emotion)</strong>al. In fact, she’s so <strong>(emotion)</strong>al that she got onto a plane and left grandpa in <strong>(place) until <strong>(season). </p>
-
-      <p>Another time, we were at my aunt’s house for <strong>(holiday)</strong> when he asked my boyfriend at the time if he would look at his bright <strong>(favorite color)</strong> bugger. My poor boyfriend, it was only our third date. He was <strong>(age)</strong>        and I was <strong>(age)</strong> years older than him. He took it like a champ, he looked at the bugger and said it looks like <strong>(ice cream)</strong> ice cream. He got really <strong>(emotion)</strong> and then he <strong>(action)</strong>.
-        This story doesn’t end here. My aunt walks into the room and asks my boyfriend if he would like to cut the cheese, and he says, “<strong>(Yes, No)</strong>” and he lets one rip. Everyone looked at each other and laughed and said, “<strong>(First Word)</strong>!
-        Welcome to the family.”</p>
-    </p> -->
-      <div class="submitc">
-        <button id="again">Again?</button>
-      </div>
+    <div class="submitc">
+      <button id="again">Again?</button>
+    </div>
   </div>
   <script>
     const inputPanel = document.querySelector("#inputPanel");
     const outputPanel = document.querySelector("#outputPanel");
+    inputPanel.focus();
+
     const warning = document.querySelector("#warning");
 
     const submit = document.querySelector("#submit");
-    submit.addEventListener("click", writeStory, false);
+    submit.addEventListener("click", writeStory);
+    submit.style.cursor = "pointer";
+
 
     const again = document.querySelector("#again");
-    again.addEventListener("click", resetPage, false);
+    again.addEventListener("click", resetPage);
 
-    document.querySelector('#firstName').focus();
+    document.querySelector('#firstWord').focus();
 
     const firstWord = document.querySelector('#firstWord');
     const boysName = document.querySelector("#boysName");
@@ -157,18 +129,24 @@ reseting the form to try again
     const place = document.querySelector('#place');
     const emotion = document.querySelector('#action');
     const action = document.querySelector('#icecream');
-    const superhero = document.querySelector('#superhere');
-    const Villain = document.querySelector('#Villain');
+    const superhero = document.querySelector('#superhero');
+    const Villain = document.querySelector('#villain');
+    const favoriteAnimal = document.querySelector('#favoriteAnimal');
     const favoriteholiday = document.querySelector('#favoriteholiday');
+    const icecream = document.querySelector('#icecream');
     const favoritecolor = document.querySelector('#favoritecolor');
-    const seanon = document.querySelector('season');
-    const age = document.querySelector('age');
+    const season = document.querySelector('#season');
+    const age = document.querySelector('#age');
     const theStory = document.querySelector("#theStory");
+
 
     window.addEventListener("keydown", keydownHandler, false);
 
-    function keydownHandler(event) {
+    function keydownHandler() {
       console.log("Enter key pressed");
+      //removes from element
+      inputPanel.blur();
+      outputPanel.innerHTML = inputPanel.value;
 
     }
 
@@ -179,53 +157,36 @@ reseting the form to try again
 
     function writeStory() {
       //grab the input values to write the story
+      outputPanel.blur();
+      inputPanel.innerHTML = outputPanel.value;
+      let story = " Did your grandpa ever ask you to pull his finger? "
+      story += firstWord.value + "! My grandpa " + boysName.value + " used to do that all of the time. He would either be pulling my sister " + girlsName.value +
+        "'s toes or be walking around asking us to pull his finger. I would like to tell you a story about my grandpa. He is kind, emotional, and a bit kooky. I love my grandpa, but he has never been the most appropriate person. He is a great person, and he looks great in " +
+        favoritecolor.value + ". He " + emotion.value + "'s, the color " + eyeColor.value + " and the movie " + age.value + " years of singing like a " + favoriteAnimal.value + "." + " In fact, he " + emotion.value +
+        "'s it so much that he doesn’t go a " + favoriteholiday.value +
+        " without making the whole family watch it with him. I will only be sharing a few stories about my grandpa because the number of them are just too great. Sit back relax and enjoy the ride. " + firstWord.value +
+        "! There was this other time last " + season.value + "that grandpa " + action.value + "ed all the way to " + place.value + " It was a sight to see. He did this all while dressed up as his favorite " + Villain.value +
+        " costume. He painted his face " + favoritecolor.value + " and " + action.value + " around in circles screaming, " + firstWord.value + "! Help! I've lost my " + favoriteAnimal.value + ", It's fur is " + eyeColor.value + " and " +
+        favoritecolor.value + ". My poor, " + favoriteAnimal.value + " is " + age.value + " and dressed in a " + superhero.value + " costume. Gandpa became very overwhelmed and was overtaken by extreme " + emotion.value +
+        ". Gandma said to him, 'Are you hungry? Lets go get you some " + icecream.value + " ice cream. It's your favorite.' Grandpa screamed, " + action.value + "' " + girlsName.value + ", Why are you standing there with your" + eyeColor.value +
+        " beady eyes. " + boysName.value + " is missing! " + firstWord.value + "! We never knew what would come out of grandpa's mouth. He did this at the local bowling alley in front of all of our family and friends. " + firstWord.value +
+        " Another time we were out of town in " + place.value + " eating " + icecream.value + " icecream watching our favorite Super Hero " + superhero.value + " and " + Villain.value + "\n" + action.value + " with " + favoriteAnimal.value +
+        "'s, when he yelled," + "'" + firstWord.value + "Poor grandma" + girlsName.value + ", she couldn't take grandpa anywhere, when we were in " +
+        place.value + ", he decided to go to the zoo and " + action.value + " until his complexion turned bright " + favoritecolor.value +
+        ". 'Look who's walking down the street. It's Grover from Sesame Street!' Everyone just stopped and stared at us. I was so embarrassed, this wasn't the first time of many embarrassing experiences with my grandpa " + boysName.value +
+        " and it probably won't be our last. He " +
+        action.value + "ed until" + superhero.value + " the zookeeper came to the rescue and put him into the " + favoriteAnimal.value + "'s pen. He was like the energizer bunny. He kept going and going and going. He " + action.value + "until" +
+        favoriteholiday.value + ". Grandma saw this and got very " + emotion.value + "al. In fact, she got so " + emotion.value + "al that she got into her hot air balloon and left grandpa in " + place.value + " until " +
+        season.value + ".\n Another time, we were are my aunt's house for " + favoriteholiday.value + " when he asked my boyfriend at the time if he would look at his bright " + favoritecolor.value +
+        " booger. He took it like a champ, he looked at the booger and said, 'It looks like " + icecream.value + " ice cream. He got really " + emotion.value + " and then he " + action.value +
+        " the booger. The story doesn't end here, my aunt walks into the room, and ask if he's ready to cut the cheese, He says, 'Yes,' and lets one rip Everyone looks at eachother with intense " + emotion.value + " and once the shear " +
+      emotion.value + " is over we all begin to laugh, when my grandpa says '" + firstWord + "! Welcome to the family."
+        theStory.innerHTML = story
 
-      <p> < strong > (First Word) < /strong>! Did your grandpa ever ask you to pull his finger? My grandpa <strong>(boy’s name)</strong > used to do that all of the time.He would either be pulling my sister < strong > (girl’ s name) <
-          /strong>’s toes or be walking around
-      asking us to pull his finger.I’ d like to tell you a story about my grandpa, < strong > (boy’ s name) <
-        /strong>. He’s kind, emotional, and a bit kooky. I love my grandpa, but he has never been the most appropriate person. He is a great person, and
-      he looks great in < strong > (favorite color) < /strong>. He <strong>(emotion)</strong > ’s < strong > (favorite animal) < /strong>’s, the color <strong>(eyes)</strong > and the movie < strong > (age) <
-        /strong> years of singing like a <strong>(favorite animal)</strong > .
-      In fact, he < strong > (emotion) < /strong>‘s it so much that he doesn’t go a <strong>(holiday)</strong > without making the whole family watch it with him.I will only be sharing a few stories about my grandpa because the number of them is just too
-      great.Sit back relax and enjoy the laughs, < strong > (first word) < /strong>!</p >
 
 
-        <
-        p > There was this other time last < strong > (season) < /strong> that grandpa <strong>(action)</strong > ed all the way to Hawaii.It was a sight to see.He did this all
-      while dressed up as his favorite < strong > (Villain) < /strong> costume. He painted his face <
-        strong > (color) < /strong> and <strong>(action)</strong > around in circles screaming, “ <
-        strong > (First Word) < /strong>! Help I’ve lost my <strong>(favorite animal)</strong > , it’ s fur is < strong > (eye color) < /strong> and <strong>(favorite color)</strong > .My poor, < strong > (favorite animal) <
-        /strong> is <strong>(age)</strong > and dressed in a < strong > (superhero) < /strong>costume.” Grandpa began to be overwhelmed by extreme <strong>(emotion)</strong > .Grandma said to him, “Are you hungry,
-        let’ s go get you some < strong > (ice cream) < /strong> ice cream, it’s your favorite.” Grandpa
-      screamed, < strong > (action) < /strong>ed and yelled, “<strong>(girl’s name)</strong > , why are you standing there with your < strong > (eyes) < /strong> beady eyes. <strong>(boy’s name)</strong > is missing!”“ < strong > (First Word) <
-        /strong>!” We never knew
-      what would be coming out of grandpa’ s mouth.He did this at the local bowling alley in front of all of our family, and friends. < /p>
-
-        <
-        p > < strong > (First Word) < /strong>! Did your grandpa ever ask you to pull his finger? My grandpa <strong>(boy’s name)</strong > used to do that all of the time.He would either be pulling my sister < strong > (girl’ s name) <
-          /strong>’s toes or be walking around
-      asking us to pull his finger.We were even in
-        <
-        strong > (place) < /strong> eating <strong>(ice cream)</strong > ice cream watching < strong > (Super Hero) < /strong> and <strong>(Villain)</strong > wrestle with < strong > (favorite animal) <
-        /strong>’s, when he yelled out, “<strong>(first word)</strong > !”
-        Everyone just stopped and stared at us I was so embarrassed.This was the first time of many embarrassing experiences with my grandpa. < /p>
-
-        <
-        p > Poor grandma < strong > (girl’ s name) < /strong>, She couldn’t take grandpa anywhere. When we were in <strong>(place)</strong > he decided to go to the zoo and < strong > (action) <
-        /strong> until his complexion turned <strong>(eye color)</strong > .He < strong > (action) < /strong>ed
-      until < strong > (superhero) < /strong> the zookeeper came to the rescue and put him into the <strong>(animal)</strong > ’s pen.He was like the energizer bunny.He kept going and going and going and going.He < strong > (action) <
-        /strong> until <strong>(holiday)</strong > .
-      Grandma saw this and got < strong > (emotion) < /strong>al. In fact, she’s so <strong>(emotion)</strong > al that she got onto a plane and left grandpa in < strong > (place) until < strong > (season). < /p>
-
-        <
-        p > Another time, we were at my aunt’ s house
-      for < strong > (holiday) < /strong> when he asked my boyfriend at the time if he would look at his bright <strong>(favorite color)</strong > bugger.My poor boyfriend, it was only our third date.He was < strong > (age) <
-        /strong>        and I was <strong>(age)</strong > years older than him.He took it like a champ, he looked at the bugger and said it looks like < strong > (ice cream) < /strong> ice cream. He got really <strong>(emotion)</strong > and then he <
-        strong > (action) < /strong>.
-      This story doesn’ t end here.My aunt walks into the room and asks my boyfriend
-      if he would like to cut the cheese, and he says, “ < strong > (Yes, No) < /strong>” and he lets one rip. Everyone looked at each other and laughed and said, “<strong>(First Word)</strong > !
-        Welcome to the family.” < /p> <
-        /p>
+      // Everyone looked at each other and laughed and said, “ < strong > (First Word) < /strong > !
+      // Welcome to the family.” < /p>
 
     }
 
@@ -234,6 +195,7 @@ reseting the form to try again
 
     }
   </script>
+  //
   <!-- <link rel="script" href="script.js"> -->
 </body>
 
