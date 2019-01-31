@@ -145,8 +145,8 @@ reseting the form to try again
     function keydownHandler() {
       console.log("Enter key pressed");
       //removes from element
-      inputPanel.blur();
-      outputPanel.innerHTML = inputPanel.value;
+      // inputPanel.blur();
+      // outputPanel.innerHTML = inputPanel.value;
 
     }
 
@@ -180,23 +180,21 @@ reseting the form to try again
         season.value + ".\n Another time, we were are my aunt's house for " + favoriteholiday.value + " when he asked my boyfriend at the time if he would look at his bright " + favoritecolor.value +
         " booger. He took it like a champ, he looked at the booger and said, 'It looks like " + icecream.value + " ice cream. He got really " + emotion.value + " and then he " + action.value +
         " the booger. The story doesn't end here, my aunt walks into the room, and ask if he's ready to cut the cheese, He says, 'Yes,' and lets one rip Everyone looks at eachother with intense " + emotion.value + " and once the shear " +
-      emotion.value + " is over we all begin to laugh, when my grandpa says '" + firstWord.value + "! Welcome to the family."
-        theStory.innerHTML = story
-
-
-
-      // Everyone looked at each other and laughed and said, “ < strong > (First Word) < /strong > !
-      // Welcome to the family.” < /p>
+        emotion.value + " is over we all begin to laugh, when my grandpa says '" + firstWord.value + "! Welcome to the family."
+      theStory.innerHTML = story;
 
     }
 
     function resetPage() {
       //put stuff here to reset the page so the user can try again
+      inputPanel.blur();
+      outputPanel.innerHTML = inputPanel.value;
+
 
     }
   </script>
 
-  <link rel="script" href="script.js">
+  <!-- <link rel="script" href="script.js"> -->
 </body>
 
 </html>
