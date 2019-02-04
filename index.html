@@ -23,12 +23,12 @@ reseting the form to try again
   <title>Master MadLib</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <!-- <link rel="script" href="script.js"> -->
+
 </head>
 
 <body>
   <header>
-    <h1><strong>Mad Lib</strong></h1>
+    <h1 id="hover"><strong>Mad Lib</strong></h1>
 
   </header>
 
@@ -80,9 +80,6 @@ reseting the form to try again
       </p>
 
       <p>What is your favorite animal?
-        <!-- <input id="favoriteAnimal" idtype="radio" name="answer2" value="cat"> Cat
-        <input id="favoriteAnimal" type="radio" name="answer2" value="dog"> Dog
-        <input id="favoriteAnimal" type="radio" name="answer2" value="dog"> Other -->
         <input class="form" id="favoriteAnimal" type="text" placeholder="animal">
       </p>
       <div class="submit">
@@ -93,7 +90,7 @@ reseting the form to try again
 
   </div>
   <div id="outputPanel">
-    <!-- <h1>A Journey Back in Time</h1> -->
+
     <p>Your story....</p>
 
 
@@ -157,8 +154,26 @@ reseting the form to try again
 
     function writeStory() {
       //grab the input values to write the story
+
+
       outputPanel.blur();
       inputPanel.innerHTML = outputPanel.value;
+
+      const img = new Image();
+      const div = document.getElementById('theStory');
+
+
+      img.onload = function() {
+
+        div.innerHTML += '<img src="' + img.src + '" />';
+        imageZoom("myimage", "myresult");
+      
+      };
+
+
+      img.src = 'Grandpaandme.png';
+
+
       let story = " Did your grandpa ever ask you to pull his finger? "
       story += firstWord.value + "! My grandpa " + boysName.value + " used to do that all of the time. He would either be pulling my sister " + girlsName.value +
         "'s toes or be walking around asking us to pull his finger. I would like to tell you a story about my grandpa. He is kind, emotional, and a bit kooky. I love my grandpa, but he has never been the most appropriate person. He is a great person, and he looks great in " +

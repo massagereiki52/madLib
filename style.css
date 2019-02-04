@@ -7,6 +7,8 @@ div {
   background-color: #becaee;
 }
 
+
+
 header {
   font-size: 4em;
   text-align: center;
@@ -115,6 +117,13 @@ p {
   cursor: pointer;
   align-items: baseline;
 }
+
+#theStory{
+  display: grid;
+  clear: both;
+
+}
+
 
 .displayNone {
   display: none;
