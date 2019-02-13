@@ -5,7 +5,6 @@ reference the core concept topics to assist you
 22 innerHTML
 25 events
 26 removals
-29 entering Text
 23 change CSS
 className=""
 display vs visibility
@@ -34,7 +33,7 @@ reseting the form to try again
 
   <div id="inputPanel">
     <h3 class="margin">Don't think about the answer's.</h3>
-    <form action="index.html" method="post">
+    <form id="form" action="index.html" method="post">
       <p>First word that pop's into your head:
         <input class="form" id="firstWord" type="text" placeholder="FirstWord">
       </p>
@@ -138,13 +137,18 @@ reseting the form to try again
 
 
     window.addEventListener("keydown", keydownHandler, false);
+    inputPanel.className = "displayBlock";
+    outputPanel.className = "displayNone";
+    warning.className = "displayNone";
 
     function keydownHandler() {
-      console.log("Enter key pressed");
-      //removes from element
-      // inputPanel.blur();
-      // outputPanel.innerHTML = inputPanel.value;
-
+      if (event.keyCode === 13) {
+        console.log("Enter key pressed");
+        writeStory();
+        //removes from element
+        // inputPanel.blur();
+        // outputPanel.innerHTML = inputPanel.value;
+      }
     }
 
     function checkComplete() {
@@ -158,16 +162,17 @@ reseting the form to try again
 
       outputPanel.blur();
       inputPanel.innerHTML = outputPanel.value;
-
       const img = new Image();
       const div = document.getElementById('theStory');
 
-
+      // inputPanel.className = "displayNone";
+      // outputPanel.className = "displayBlock";
+      // warning.className = "displayNone";
       img.onload = function() {
 
         div.innerHTML += '<img src="' + img.src + '" />';
         imageZoom("myimage", "myresult");
-      
+
       };
 
 
@@ -198,14 +203,21 @@ reseting the form to try again
         emotion.value + " is over we all begin to laugh, when my grandpa says '" + firstWord.value + "! Welcome to the family."
       theStory.innerHTML = story;
 
+      inputPanel.className = "displayNone";
+      outputPanel.className = "displayBlock";
+      warning.className = "displayNone";
+
     }
 
     function resetPage() {
       //put stuff here to reset the page so the user can try again
       inputPanel.blur();
       outputPanel.innerHTML = inputPanel.value;
+      window.location.reload(true);
 
-
+      inputPanel.className = "displayNone";
+      outputPanel.className = "displayBlock";
+      warning.className = "displayNone";
     }
   </script>
 
