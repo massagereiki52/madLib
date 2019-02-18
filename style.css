@@ -20,7 +20,7 @@ body {
   width: 100%;
   display: grid;
   clear: both;
-  background-color:#00CC44;
+  background-color: #00CC44;
   background-image: url(./zebra.png);
 }
 
@@ -29,7 +29,7 @@ h1 {
 }
 
 strong {
-  font-weight:bolder;
+  font-weight: bolder;
 }
 
 p {
