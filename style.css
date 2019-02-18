@@ -5,9 +5,9 @@
 div {
   /*border: 3px solid black;*/
   background-color: #becaee;
+  /*background-color: #f535aa;*/
+  /*background-color: #4e2379;*/
 }
-
-
 
 header {
   font-size: 4em;
@@ -20,17 +20,16 @@ body {
   width: 100%;
   display: grid;
   clear: both;
-  background-color: #4e2379;
+  background-color:#00CC44;
   background-image: url(./zebra.png);
 }
 
-
 h1 {
-  color: #83f52c;
+  color: #f535aa;
 }
 
 strong {
-  font-weight: bold;
+  font-weight:bolder;
 }
 
 p {
@@ -91,17 +90,16 @@ p {
   clear: both;
 }
 
-#theStory{
+#theStory {
   display: grid;
   clear: both;
-
 }
 
-
-#warning{
-  background-color: #f535aa;
-  color:white;
+#warning {
+  background-color: #4e2379;
+  color: white;
 }
+
 .displayNone {
   display: none;
 }
@@ -110,16 +108,15 @@ p {
   display: flex;
 }
 
-
 .submit {
-  padding:5em;
+  padding: 5em;
 }
 
 .form {
   width: 250px;
   height: 25px;
-
 }
-.bgGreen{
-  background:#83f52c;
+
+.bgGreen {
+  background: #83f52c;
 }
