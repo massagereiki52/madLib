@@ -276,18 +276,11 @@ reseting the form to try again
     }
 
 
-    function addTextNode(text) {
-      const newP = document.createElement('p')
-      const newT = document.createTextNode(text)
-      newP.appendChild(newT)
-      theStory.appendChild(newP)
-    }
-
     function resetPage() {
       //put stuff here to reset the page so the user can try again
-      // inputPanel.blur();
-      // outputPanel.innerHTML = inputPanel.value;
-      // window.location.reload(true);
+      inputPanel.focus();
+      outputPanel.innerHTML = inputPanel.value;
+      window.location.reload(true);
 
       inputPanel.className = "displayBlock";
       outputPanel.className = "displayNone";
@@ -334,8 +327,6 @@ reseting the form to try again
     }
   </script>
 
-
-  <!-- <link rel="script" href="script.js"> -->
 </body>
 
 </html>
