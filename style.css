@@ -10,8 +10,9 @@ div {
 header {
   font-size: 4em;
   text-align: center;
-  -webkit-text-stroke: 1.5px black;
+  -webkit-text-stroke: .4px white;
   font-family: fantasy;
+  text-shadow: .5px black;
 }
 
 body {
@@ -24,11 +25,14 @@ body {
 
 h1 {
   color: #f535aa;
+  font-weight: bolder;
+
 }
 
-strong {
+/*strong {
   font-weight: bolder;
-}
+
+}*/
 
 p {
   font-size: 1em;
