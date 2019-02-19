@@ -12,7 +12,7 @@ header {
   text-align: center;
   -webkit-text-stroke: .4px white;
   font-family: fantasy;
-  text-shadow: .5px black;
+  text-shadow: black;
 }
 
 body {
@@ -29,11 +29,6 @@ h1 {
 
 }
 
-/*strong {
-  font-weight: bolder;
-
-}*/
-
 p {
   font-size: 1em;
   -webkit-text-stroke: .25px white;
@@ -47,7 +42,6 @@ p {
 
 #inputPanel {
   border: 3px solid black;
-  text-shadow: 5px black;
   margin-bottom: 50px;
   margin-left: 75px;
   margin-right: 75px;
@@ -56,7 +50,6 @@ p {
 
 #outputPanel {
   border: 3px solid black;
-  text-shadow: 5px black;
   margin-bottom: 50px;
   margin-left: 75px;
   margin-right: 75px;
