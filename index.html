@@ -33,7 +33,7 @@ reseting the form to try again
 
   <div id="inputPanel">
 
-    <form id="form" action="index.html" method="post">
+    <div id="form" action="index.html" method="post">
       <p>First word that pop's into your head:
         <input class="form" id="firstWord" type="text" placeholder="FirstWord">
       </p>
@@ -81,12 +81,12 @@ reseting the form to try again
       <p>What is your favorite animal?
         <input class="form" id="favoriteAnimal" type="text" placeholder="animal">
       </p>
-      <div class="submit">
+      <div class="this">
         <button id="submit">Submit your answers</button>
         <p id="warning">Please answer all questions.</p>
       </div>
 
-    </form>
+    </div>
 
   </div>
   <div id="outputPanel">
@@ -97,9 +97,8 @@ reseting the form to try again
     <section id="theStory"></section>
 
 
-    </p>
 
-    <div class="submit">
+    <div class="this">
       <button id="again">Again?</button>
     </div>
 
@@ -141,7 +140,7 @@ reseting the form to try again
 
     inputPanel.className = "displayBlock";
     outputPanel.className = "displayNone";
-    warning.className = "displayBlock";
+    warning.className = "displayNone";
 
     firstWord.focus();
 
@@ -206,14 +205,8 @@ reseting the form to try again
       }
 
 
-      if (firstWord.value == "" || boysName.value == "" || girlsName.value == "" || eyeColor.value == "" || place.value == "" || emotion.value == "" || action.value == "" || icecream.value == "" || superhero.value == "") {
-        warning.className = "displayBlock"
-        return false
-      } else {
-        return true
-      }
-
-      if (Villain.value == "" || favoriteholiday.value == "" || favoritecolor.value == "" || season.value == "" || age.value == "" || favoriteAnimal.value == "") {
+      if (firstWord.value == "" || boysName.value == "" || girlsName.value == "" || eyeColor.value == "" || place.value == "" || emotion.value == "" || action.value == "" || icecream.value == "" || superhero.value == "" ||
+      Villain.value == "" || favoriteholiday.value == "" || favoritecolor.value == "" || season.value == "" || age.value == "" || favoriteAnimal.value == "") {
         warning.className = "displayBlock"
         return false
       } else {
@@ -248,19 +241,24 @@ reseting the form to try again
       story += firstWord.value + "! My grandpa " + boysName.value + " used to do that all of the time. He would either be pulling my sister " + girlsName.value +
         "'s toes or be walking around asking us to pull his finger. I would like to tell you a story about my grandpa. He is kind, emotional, and a bit kooky. I love my grandpa, but he has never been the most appropriate person. He is a great person, and he looks great in " +
         favoritecolor.value + ". He " + emotion.value + "'s, the color " + eyeColor.value + " and the movie " + age.value + " years of singing like a " + favoriteAnimal.value + "." + " In fact, he " + emotion.value +
-        "'s it so much that he doesn’t go a " + favoriteholiday.value +
+        "'s it so much that he doesn’t go a "
+
+        story += favoriteholiday.value +
       " without making the whole family watch it with him. I will only be sharing a few stories about my grandpa because the number of them are just too great. Sit back relax and enjoy the ride. " + firstWord.value +
       "! There was this other time last " + season.value + "that grandpa " + action.value + "ed all the way to " + place.value + " It was a sight to see. He did this all while dressed up as his favorite " + Villain.value +
       " costume. He painted his face " + favoritecolor.value + " and " + action.value + " around in circles screaming, " + firstWord.value + "! Help! I've lost my " + favoriteAnimal.value + ", It's fur is " + eyeColor.value + " and " +
-      favoritecolor.value + ". My poor, " + favoriteAnimal.value + " is " + age.value + " and dressed in a " + superhero.value + " costume. Gandpa became very overwhelmed and was overtaken by extreme " + emotion.value +
+      favoritecolor.value + ". My poor, "
+
+      story += favoriteAnimal.value + " is " + age.value + " and dressed in a " + superhero.value + " costume. Gandpa became very overwhelmed and was overtaken by extreme " + emotion.value +
       ". Gandma said to him, 'Are you hungry? Lets go get you some " + icecream.value + " ice cream. It's your favorite.' Grandpa screamed, " + action.value + "' " + girlsName.value + ", Why are you standing there with your" + eyeColor.value +
       " beady eyes. " + boysName.value + " is missing! " + firstWord.value + "! We never knew what would come out of grandpa's mouth. He did this at the local bowling alley in front of all of our family and friends. " + firstWord.value +
       " Another time we were out of town in " + place.value + " eating " + icecream.value + " icecream watching our favorite Super Hero " + superhero.value + " and " + Villain.value + "\n" + action.value + " with " + favoriteAnimal.value +
       "'s, when he yelled," + "'" + firstWord.value + "Poor grandma" + girlsName.value + ", she couldn't take grandpa anywhere, when we were in " +
       place.value + ", he decided to go to the zoo and " + action.value + " until his complexion turned bright " + favoritecolor.value +
       ". 'Look who's walking down the street. It's Grover from Sesame Street!' Everyone just stopped and stared at us. I was so embarrassed, this wasn't the first time of many embarrassing experiences with my grandpa " + boysName.value +
-      " and it probably won't be our last. He " +
-      action.value + "ed until" + superhero.value + " the zookeeper came to the rescue and put him into the " + favoriteAnimal.value + "'s pen. He was like the energizer bunny. He kept going and going and going. He " + action.value + "until" +
+      " and it probably won't be our last. He "
+
+      story += action.value + "ed until" + superhero.value + " the zookeeper came to the rescue and put him into the " + favoriteAnimal.value + "'s pen. He was like the energizer bunny. He kept going and going and going. He " + action.value + "until" +
       favoriteholiday.value + ". Grandma saw this and got very " + emotion.value + "al. In fact, she got so " + emotion.value + "al that she got into her hot air balloon and left grandpa in " + place.value + " until " +
       season.value + ".\n Another time, we were are my aunt's house for " + favoriteholiday.value + " when he asked my boyfriend at the time if he would look at his bright " + favoritecolor.value +
       " booger. He took it like a champ, he looked at the booger and said, 'It looks like " + icecream.value + " ice cream. He got really " + emotion.value + " and then he " + action.value +
@@ -279,7 +277,7 @@ reseting the form to try again
     function resetPage() {
       //put stuff here to reset the page so the user can try again
       inputPanel.focus();
-      outputPanel.innerHTML = inputPanel.value;
+      // outputPanel.innerHTML = inputPanel.value;
       window.location.reload(true);
 
       inputPanel.className = "displayBlock";
